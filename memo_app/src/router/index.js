@@ -6,7 +6,7 @@ import Edit from '../views/Edit.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
+// const routes = [
   // {
   //   path: '/',
   //   name: 'Home',
@@ -17,20 +17,20 @@ const routes = [
   //   name: 'New',
   //   component: New
   // },
-  {
-    path: '/edit/:id',
-    name: 'Edit',
-    component: Edit
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+  // {
+  //   path: '/edit/:id',
+  //   name: 'Edit',
+  //   component: Edit
+  // },
+//   {
+//     path: '/about',
+//     name: 'About',
+//     // route level code-splitting
+//     // this generates a separate chunk (about.[hash].js) for this route
+//     // which is lazy-loaded when the route is visited.
+//     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+//   }
+// ]
 
 const router = new VueRouter({
   mode: 'history',
@@ -56,18 +56,18 @@ const router = new VueRouter({
         default: true,
         header: true
       }
+    },
+    {
+      path: "/edit/:id",
+      components: {
+        default: Edit,
+        header: Home
+      },
+      props: {
+        default: true,
+        header: true
+      }
     }
-    // {
-    //   path: "/edit/:id",
-    //   components: {
-    //     default: Edit,
-    //     header: Home
-    //   },
-    //   props: {
-    //     default: true,
-    //     header: true
-    //   }
-    // }
   ]
 })
 
