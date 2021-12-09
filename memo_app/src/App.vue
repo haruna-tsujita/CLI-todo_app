@@ -5,6 +5,7 @@
       <router-link to="/new">New</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+    <router-view name="header"></router-view>
     <router-view/>
   </div>
 </template>
