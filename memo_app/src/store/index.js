@@ -18,12 +18,12 @@ export default new Vuex.Store({
       state.memos.push(memo)
       },
     update(state, data) {
-        const x = state.memos.find(memo => memo.id == data.id);
+        const x = state.memos.find(memo => memo.id == data.id)
         x.body = data.body
     },
     remove (state, id) {
       for (let i =0; i < state.memos.length; i++) {
-        if (state.memos[i].id === id) {
+        if (state.memos[i].id == id) {
           state.memos.splice(i, 1)
         }
       }
