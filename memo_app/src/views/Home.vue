@@ -2,7 +2,7 @@
   <div class="home">
     <ul>
       <li v-for="memo in newest" :key="memo.id">
-        <router-link :to="`/edit/${memo.id}`">{{memo.body}}</router-link>
+        <router-link :to="`/edit/${memo.id}`">{{memo.body.split("\n")[0]}}</router-link>
       </li>
     </ul>
   </div>
