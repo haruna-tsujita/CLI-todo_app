@@ -1,9 +1,11 @@
 import Vue from 'vue'
+import createdPersistedState from 'vuex-persistedstate'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  plugins: [createdPersistedState()],
   state: {
     memos: []
   },
