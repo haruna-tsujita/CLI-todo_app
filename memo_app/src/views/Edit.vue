@@ -16,13 +16,15 @@
     },
     mounted: function() {
       let id = this.$route.params["id"]
-      let memo = this.$store.state.memos.slice().find(memo => memo.id == id)
+      id = Number(id)
+      let memo = this.$store.state.memos.slice().find(memo => memo.id === id)
       this.memoBody = memo.body
     },
     computed: {
       memo: function() {
         let id = this.$route.params["id"]
-        return this.$store.state.memos.find(memo => memo.id == id)
+        id = Number(id)
+        return this.$store.state.memos.find(memo => memo.id === id)
       }
     },
     methods: {
