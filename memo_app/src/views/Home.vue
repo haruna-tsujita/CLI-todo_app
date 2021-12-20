@@ -9,13 +9,13 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'home',
-  computed: {
-    newest: function() {
-      return this.$store.state.memos.slice().reverse();
-    }
-  }
+  computed: mapState({
+    newest: state => state.memos.slice().reverse()
+  })
 }
 </script>
 
